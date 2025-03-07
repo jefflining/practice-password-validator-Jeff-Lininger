@@ -11,18 +11,14 @@ if (password) {
 
 for (let i = 0; i < password.length; i++) {
   if (!isNaN(parseInt(password[i]))) {
+    if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90);
+    hasUpperCase = true;
     hasNumber = true; 
     break;
   }
 }
 
-for (let i = 0; i < password.length; i++) {
-    if (password.charCodeAt(i) >= 65 && password.charCodeAt(i) <= 90) {
-      hasUpperCase = true;
-      break;
-    }
-  }
-
+}
 if (hasNumber) {
     if (password.length >= 8)
         if (hasUpperCase) 
@@ -30,4 +26,4 @@ if (hasNumber) {
 } else {
   console.log("Password is not valid.");
 }
-}
+
